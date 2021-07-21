@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js">
+    </script>
+</head>
+<body>
+    <script>
+        // var height = prompt('신장?');
+        // var weight = prompt('몸무게?');
+        // var normal = (height - 100) * 0.9;
+        // if(weight - normal >= 10)
+        // {
+        //     document.write('과체중입니다.')
+        // }
+        // else if(weight - noraml <= -10)
+        // {
+        //     document.write('저체중입니다.')
+        // }
+        // else 
+        // {
+        //     document.write('정상체중입니다.')
+        // }
+        
+        // 객체
+        // var obj1 = {number: 1,name: '김도균', age: 16};
+        // {var obj2 = {number: 2, name: '김민준', age: 16};
+        // alert(obj1.name);
+
+        // for (var i = 0; i < 10; i++)
+        // {
+        //     for (var j = 0; j <= i; j++)
+        //     {
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
+
+        // var chung = Math.random();
+        // var hong = Math.random();
+        // chung = reuslt(chung);
+        // hong = result(hong);
+        
+        // var final;
+        // if(chung=='가위' && hong=='바위') {final = '홍승'}
+        // else if(chung =='가위' && hong =='보') {final = '청승'}
+        // else if(chung =='바위' && hong=='가위') {final = '청승'}
+        // else if(chung =='바위' && hong=='보') {final = '홍승'}
+        // else if(chung =='보' && hong=='가위') {final = '홍승'}
+        // else if(chung =='보' && hong=='바위') {final = '청승'}
+        // else if{final = '무승부'}
+
+
+        // function result(a) 
+        // {
+        //     if (a <= 0.3333)
+        //     {
+        //         return '가위';
+        //     }
+        //     else if (a <= 0.6666)
+        //     {
+        //         return '바위';
+        //     }
+        //     else 
+        //     {
+        //         return '보';
+        //     }
+        // }
+
+        // document.write('<h2 sytle="color:blue">청 : '+chung+'<h2>');    
+        // document.write('<h2 sytle="color:red">홍 : '+hong+'<h2>');    
+        // document.write('<h1>결과 : '+final+'<h1>');    
+
+        var chung = {};
+        var hong = {};
+        chung.num = Math.random();
+        hong.num = Math.random();
+        chung.result = result(chung.num);
+        hong.result = result(hong.num);
+        chung.img = img(chung.result);
+        hong.img = img(hong.result);
+
+        var final;
+        if(chung.result=='가위'&&hong.result=='바위') {final = '홍 승'}
+        else if(chung.result=='가위'&&hong.result=='보') {final = '청 승'}
+        else if(chung.result=='바위'&&hong.result=='가위') {final = '청 승'}
+        else if(chung.result=='바위'&&hong.result=='보') {final = '홍 승'}
+        else if(chung.result=='보'&&hong.result=='바위') {final = '청 승'}
+        else if(chung.result=='보'&&hong.result=='가위') {final = '홍 승'}
+        else {final = '무승부'}
+
+
+
+        function result(a){
+            if(a<=0.3333) {
+                return '가위';
+            } else if(a<=0.6666) {
+                return '바위';
+            } else{
+                return '보';
+            }
+        }
+
+        function img(a) {
+            if(a=='가위') {return '1.png'}
+            if(a=='바위') {return '2.png'}
+            if(a=='보') {return '3.png'}
+        }
+        document.write('<h2>청 : <img src="img/'+chung.img+'" class="res"></h2>');
+        document.write('<h2>홍 : <img src="img/'+hong.img+'" class="res"></h2>');
+        document.write('<h1> 결과 : '+final+'</h1>');
+        </script>
+        <style>
+            .res {width : 100px;}
+        </style>
+</body>
+</html>
