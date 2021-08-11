@@ -10,7 +10,7 @@ body{font-family: 'Noto Sans KR', sans-serif,'맑은 고딕';font-size: 12px;}
 
 [class*=span] {float: left;margin-right: 2%;}
 [class*=span]:last-child {margin-right: 0;}
-.pad8 {padding-top: 8px;}
+.pad8 {padding-top: 8px;}  
 .span1 {width: 6.5%;}
 .span2 {width: 15%;}
 .span3 {width: 23.5%;}
