@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ $(document).ready(function() {
     $('#gnb>li').hover(function() {
         $('.submenu', this).stop().slideDown();
     }, function() {
